@@ -14,6 +14,9 @@
   <%= f.label :content, 'タスク' %>
   <%= f.text_field :content %>
   
+  <%= f.label :status, 'ステータス' %>
+  <%= f.select :status, [["未着手", "未着手"], ["進行中", "進行中"], ["確認待ち", "確認待ち"], ["完了済", "完了済"]] ,class:"form-control" %>
+  
   <%= f.submit '追加する' %>
 <% end %>
 
