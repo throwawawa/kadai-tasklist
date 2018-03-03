@@ -8,6 +8,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @tasks = @user.tasks.order('created_at DESC').page(params[:page])
+    unless current_user == @user
+      redirect_to tasks_path
+    end
   end
 
   def new

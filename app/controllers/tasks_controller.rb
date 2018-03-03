@@ -12,6 +12,9 @@ class TasksController < ApplicationController
 
   def show
     set_task
+    unless current_user == @task.user
+      redirect_to root_url
+    end
   end
 
   def new
