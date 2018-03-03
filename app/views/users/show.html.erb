@@ -1,5 +1,5 @@
 <div class="row">
-  <aside class="col-xs-4">
+  <aside class="col-xs-2">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title"><%= @user.id %>：<%= @user.name %></h3>
@@ -9,9 +9,10 @@
       </div>
     </div>
   </aside>
-  <div class="col-xs-8">
+  <div class="col-xs-10">
     <ul class="nav nav-tabs nav-justified">
       <li><a href="#">Tasklist</a></li>
     </ul>
+    <%= render 'tasks/tasks', tasks: @tasks %>
   </div>
 </div>
